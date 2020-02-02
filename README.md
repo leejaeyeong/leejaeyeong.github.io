@@ -1,249 +1,238 @@
-# Centrarium [![Circle CI](https://circleci.com/gh/bencentra/centrarium/tree/master.svg?style=svg)](https://circleci.com/gh/bencentra/centrarium/tree/master)
+# Jekyll Theme Chirpy
 
-A simple yet classy theme for your Jekyll website or blog. Customizable to fit your style or brand.
+[![Build Status](https://github.com/cotes2020/jekyll-theme-chirpy/workflows/build/badge.svg?event=push)](https://github.com/cotes2020/jekyll-theme-chirpy/actions?query=event%3Apush)
+[![GitHub license](https://img.shields.io/github/license/cotes2020/jekyll-theme-chirpy.svg)](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE)
+[![996.icu](https://img.shields.io/badge/link-996.icu-%23FF4D5B.svg)](https://996.icu)
 
-Built with these awesome libraries:
-* [Bourbon][bourbon]
-* [Neat][neat]
-* [Bitters][bitters]
-* [Refills][refills]
-* [Font Awesome][fontawesome]
-* [HighlightJS][highlightjs]
-* [Lightbox][lightbox]
+Language: English | [简体中文](docs/README_zh-CN.md)
 
-Here's a [demo](http://bencentra.com/centrarium). It also works on [GitHub Pages](http://bencentra.github.io/centrarium/). I also use it for [my own website][bencentra].
+A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text exhibition. It will help you easily record, manage and share your knowledge and experience. 
 
-Inspired by dirkfabisch's [Mediator](https://github.com/dirkfabisch/mediator) theme, which I previously used for my own blog, as well as [Type Theme](http://rohanchandra.github.io/type-theme/).
+You will get the following features:
 
-Cover image by Chris M. Morris ([flickr][cover]).
+* Auto Dark Mode
+* Posts' Last Modified Date
+* Table of Contents
+* Automatically Recommend Related Posts
+* Syntax highlighting
+* Two Level Categories
+* Search
+* Atom Feeds
+* Disqus Comments
+* Google Analytics
+* GA Pageviews (Advanced)
+* SEO Tag
+* Performance Optimization
 
-## Features
+[**Live Demo** »](https://chirpy.cotes.info)
 
-This theme comes with a number of features, including:
-* Easily customizable fonts and colors
-* Cover images for your homepage and blog posts
-* Pagination enabled by default
-* Archiving of posts by categories and tags
-* Syntax highlighting for code snippets
-* Disqus integration for post comments
-* Lightbox for viewing full-screen photos and albums
-* Google Analytics with custom page name tracking
-* Social media integration (Twitter, Facebook, LinkedIn, GitHub, and more)
+![devices-mockup](https://raw.githubusercontent.com/cotes2020/jekyll-theme-chirpy/master/assets/img/sample/devices-mockup.png)
 
-## Installation
+## Table of Contents
 
-If you're just getting started with Jekyll, you can use this repository as a starting point for your own site. Just [download this project](https://github.com/bencentra/centrarium/archive/master.zip) and add all the files to your project. Add your blog posts to the `posts/` directory, and create your pages with the proper Jekyll front matter (see `posts.html` for an example).
+* [Installing](#installing)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [Credits](#credits)
+* [Support](#support)
+* [License](#license)
 
-If your site already uses Jekyll, follow these steps:
 
-1. Replace the files in the `_includes`, `_layouts`, and `_sass` directories with those from this project.
-2. Replace your `index.html` with the one from this project, and copy over the `posts.html` file as well.
-3. Copy the contents of the `_config.yml` from this project in to yours, and update the necessary information.
+## Installing
 
-Don't forget to install Jekyll and other dependencies:
-```bash
-# cd into project directory
-cd centrarium
-# install Bundler if you don't have it already
-gem install bundler
-# install jekyll, jekyll-archives, jekyll-sitemap, and jekyll-paginate
-bundle install
+### Prerequisites
+
+Follow the [Jekyll Docs](https://jekyllrb.com/docs/installation/) to complete the installtion of basic environment (Ruby, RubyGem, Bundler and Jekyll). In order to use the script tools to save time, we also need to install [Python](https://www.python.org/downloads/)(version 3.5 or abover) and [ruamel.yaml](https://pypi.org/project/ruamel.yaml/).
+
+In addition, if your machine is running Debian or macOS, make sure you have the [GNU coreutils](https://www.gnu.org/software/coreutils/) installed. Otherwise, get it by:
+
+* Debian
+
+```console
+$ sudo apt-get install coreutils
 ```
 
-## Stackbit Deploy
+* macOS
 
-This theme is ready to import into Stackbit. This theme can be deployed to Netlify and you can connect any headless CMS including Forestry, NetlifyCMS, DatoCMS or Contentful. 
-
-[![Create with Stackbit](https://assets.stackbit.com/badge/create-with-stackbit.svg)](https://app.stackbit.com/create?theme=https://github.com/bencentra/centrarium)
-
-## Updating Header and Footer Links
-
-Links in the header and footer are auto-generated. Links will be made for all files marked `category: page`, that have a title, and have the custom `main_nav` front-matter variable set to `true`. You can modify the rules for link generation in `_layouts/nav_links.html`.
-
-## Updating Styles
-
-If you want change the CSS of the theme, you'll probably want to check out these files in the `_sass/` directory:
-
-* `base/_variables.scss`: Common values found throughout the project, including base font size, font families, colors, and more.
-* `base/_typography.scss`: Base typography values for the site (see `typography.html` for a demonstration)
-* `_layout.scss`: The primary styles for the layout and design of the theme.
-
-### Important Variables
-
-Here are the important variables from `base/_variables.scss` you can tweak to customize the theme to your liking:
-
-* `$base-font-family`: The font-family of the body text. Make sure to `@import` any new fonts!
-* `$heading-font-family`: The font-family of the headers. Make sure to `@import` any new fonts!
-* `$base-font-size`: The base font-size. Defaults to $em-base from Bourbon (`bourbon/settings/_px-to-em.scss`).
-* `$base-font-color`: The color for the body text.
-* `$action-color`: The color for links in the body text.
-* `$highlight-color`: The color for the footer and page headers (when no cover image provided).
-
-## Configuration
-
-All configuration options can be found in `_config.yml`.
-
-### Site Settings
-
-* __title:__ The title for your site. Displayed in the navigation menu, the `index.html` header, and the footer.
-* __subtitle:__ The subtitle of your site. Displayed in the `index.html` header.
-* __email:__ Your email address, displayed with the Contact info in the footer.
-* __name:__ Your name. _Currently unused._
-* __description:__ The description of your site. Used for search engine results and displayed in the footer.
-* __baseurl:__ The subpath of your site (e.g. /blog/).
-* __url:__ The base hostname and protocol for your site.
-* __cover:__ The relative path to your site's cover image.
-* __logo:__ The relative path to your site's logo. Used in the navigation menu instead of the title if provided.
-
-### Build Settings
-
-* __markdown:__ Markdown parsing engine. Default is kramdown.
-* __inter_post_navigation:__ Whether to render links to the next and previous post on each post.
-
-### Pagination settings
-
-See the documentation for [jekyll-paginate-v2](https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md#site-configuration) for more details.
-
-### Archive Settings
-
-Although this theme comes with a combined, categorized archive (see `posts.html`), you can enable further archive creation thanks to [jekyll-archives][archives]. Support for category and tag archive pages is included, but you can also add your own archive pages for years, months, and days.
-
-To change archive settings, see the __jekyll-archives__ section of `_config.yml`:
-
-```yml
-jekyll-archives:
-  enabled:
-    - categories
-    - tags
-  layout: 'archive'
-  permalinks:
-    category: '/category/:name/'
-    tag: '/tag/:name/'
+```console
+$ brew install coreutils
 ```
 
-To fully disable the archive, remove the __jekyll-archives__ section AND remove it from the __gems__ list.
 
-__NOTE:__ the Jekyll Archive gem is NOT included with GitHub pages! Disable the archive feature if you intend to deploy your site to GitHub pages. [Here is a guide](http://ixti.net/software/2013/01/28/using-jekyll-plugins-on-github-pages.html) on how you can use the `jekyll archive` gem with GitHub pages. The general gist: compile the Jekyll site locally and then push that compiled site to GitHub.
+### Jekyll Plugins
 
-A sitemap is also generated using [jekyll-sitemap][sitemap].
+[Fork **Chirpy** from GitHub](https://github.com/cotes2020/jekyll-theme-chirpy/fork), then clone your forked repo to local:
 
-### Syntax Highlighting Settings
-
-Inside of a post, you can enable syntax highlighting with the `{% highlight <language> %}` Liquid tag. For example:
-
-```
-{% highlight javascript %}
-function demo(string, times) {
-  for (var i = 0; i < times; i++) {
-    console.log(string);
-  }
-}
-demo("hello, world!", 10);
-{% endhighlight %}
+```console
+$ git clone git@github.com:USER/jekyll-theme-chirpy.git
 ```
 
-You can change the [HighlightJS theme][highlightjs_theme] in `_config.yml`:
+replace the `USER` above to your GitHub username.
 
-```yml
-highlightjs_theme: "monokai_sublime"
+The first time you run or build the project on your machine, perform the installation of Jekyll plugins. Go to the root of repo and run:
+
+```terminal
+$ bundle install
 ```
 
-### Disqus Settings
+`bundle` will automatically install all the dependent Jekyll Plugins that listed in the `Gemfile`.
 
-You can enable [Disqus][disqus] comments for you site by including one config option:
 
-* __disqus_shortname:__ Your Disqus username. If the property is set, Disqus comments will be included with your blog posts.
+## Usage
 
-If you want to disable Disqus for only a specific page, add __disqus_disabled: true__ to the page's front matter.
 
-### Google Analytics Settings
+### Directory Structure
 
-You can enable basic [Google Analytics][ga] pageview tracking by including your site's tracking ID:
+The main files and related brief introductions are listed below.
 
-* __ga_tracking_id__: The Tracking ID for your website. You can find it on your Google Analytics dashboard. If the property is set, Google Analytics will be added to the footer of each page.
-
-### Social Settings
-
-Your personal social network settings are combined with the social sharing options. In the __social__ section of `_config.yml`, include an entry for each network you want to include. For example:
-
-```yml
-social:
-  - name: Twitter                         # Name of the service
-    icon: twitter                         # Font Awesome icon to use (minus fa- prefix)
-    username: TheBenCentra                # (User) Name to display in the footer link
-    url: https://twitter.com/TheBenCentra # URL of your profile (leave blank to not display in footer)
-    desc: Follow me on Twitter            # Description to display as link title, etc
-    share: true                           # Include in the "Share" section of posts
+```sh
+jekyll-theme-chirpy/
+├── _data
+├── _includes      
+├── _layouts
+├── _posts          # posts stay here
+├── _scripts
+├── .travis.yml     # remove it
+├── .github         # remove this, too
+├── assets      
+├── tabs
+│   └── about.md    # the ABOUT page
+├── .gitignore
+├── 404.html
+├── Gemfile
+├── LICENSE
+├── README.md
+├── _config.yml     # configuration file
+├── tools           # script tools
+├── docs
+├── feed.xml
+├── index.html
+├── robots.txt
+└── sitemap.xml
 ```
 
-### Social Protocols
 
-Using the Open Graph Protocol or Twitter Card metadata, you can automatically set the images and text used when people share your site on Twitter or Facebook. These take a bit of setup, but are well worth it. The relevant fields are at the end of the `_config.yml` file.
+As mentioned above, some files or directories should be removed from your repo:
 
-Also there is another protocol, the Open Source protocol, for saying where your site is hosted if the source is open. This helps develops more easily see your code if they are interested, or if they have issues. For more, see http://osprotocol.com.
+- .travis.yml
+- .github
 
-### Category Descriptions
 
-You can enhance the `posts.html` archive page with descriptions of your post categories. See the __descriptions__ section of `_config.yml`:
+### Customization
 
-```yml
-# Category descriptions (for archive pages)
-descriptions:
-  - cat: jekyll
-    desc: "Posts describing Jekyll setup techniques."
+Basically, go to `_config.yml` and customize the variables as needed, some of them are typical options:
+
+* Avatar
+    
+    `avatar` defines the source image location. The sample image is `/assets/img/sample/avatar.jpg`. It should be replaced by your own one. Notice that a huge image file will increase the load time of your site, so keep your avatar size as samll as possible(may be *<https://tinypng.com/>* will help).
+
+* TimeZone
+
+    To ensure that the posts' release date matches the city you live in, please modify the field `timezone` correctly. A list of all available values can be found on [TimezoneConverter](http://www.timezoneconverter.com/cgi-bin/findzone/findzone) or [Wikipedia](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
+
+
+###  Run Locally
+
+You may want to preview the site before publishing, so just run the script tool:
+
+```terminal
+$ bash tools/run.sh
 ```
 
-### Custom Page-Specific Javascript
+Open a modern brower and visit at <http://localhost:4000>.
 
-You can add page-specific javascript files by adding them to the top-level `/js` directory and including the filename in the __custom_js__ page's configuration file:
+Few days later, you may find that the file modification(e.g. edits to a post) does not refresh in real time by using `run.sh`. Don't worry, the advanced option `-r` (or `--realtime`) will solve this problem, but it requires [**fswatch**](http://emcrisostomo.github.io/fswatch/) to be installed on your machine. Type `-h` for more information.
 
-```yml
-# Custom js (for individual pages)
----
-layout: post
-title:  "Dummy Post"
-date:   2015-04-18 08:43:59
-author: Ben Centra
-categories: Dummy
-custom_js:
-- Popmotion
-- Vue
----
+###  Deploying to GitHub Pages
+
+Before the deployment begins, ensure the `url` in file `_config.yml` has been set to `https://<username>.github.io`(or the custom domain, if you have. e.g. `https://yourdomain.com`). What's more, if you prefer to the [Project site](https://help.github.com/en/github/working-with-github-pages/about-github-pages#types-of-github-pages-sites), change `baseurl` of file `_config.yml` to your project name, starting with a slash. e.g. `/project`.
+
+#### Option 1: Built by GitHub Pages
+
+By deploying the site in this way, you're allowed to push the source code directly to the remote.
+
+> **Note**: If you want to use any third-party Jekyll plugins that not in [this list](https://pages.github.com/versions/), stop reading the current approach and go to [*Option 2: Build locally*](#option-2-build-locally).
+
+**1**. Rename the repository to:
+
+|Site Type | Repo's Name|
+|:---|:---|
+|User or Organization | `<username>.github.io`|
+|Project| any one except `<username>.github.io`, let's say `project`|
+
+**2**. Commit the changes of the repo first, then run the initialization script:
+
+```terminal
+$ bash tools/init.sh
 ```
 
-The `/js/` directory would contain the corresponding files:
+>**Note**: The *Recent Update* requires the posts' latest git-log date, so make sure the changes in `_posts` have been committed before running this command.
 
-```bash
-$ ls js/
-Popmotion.js Vue.js
+it will automatically generates the *Latest Modified Date* and *Categories / Tags* page for the posts.
+
+**3**. Push the changes to `origin/master` then go to GitHub website and enable GitHub Pages service for the repo.
+
+**4**. Check it out:
+
+|Site Type | Site URL |
+|:---|:---|
+|User or Organization | `https://<username>.github.io/`|
+|Project| `https://<username>.github.io/project/`|
+
+
+#### Option 2: Build Locally
+
+For security reasons, GitHub Pages runs on `safe` mode, which means the third-party Jekyll plugins or custom scripts won't work. If you want to use any another plugins that not in the [whitelist](https://pages.github.com/versions/), **you have to generate the site locally rather than on GitHub Pages**.
+
+**1**. Browse to GitHub website, create a brand new repo named: 
+
+|Site Type | Repo's Name|
+|:---|:---|
+|User or Organization | `<username>.github.io`|
+|Project| any one except `<username>.github.io`, let's say `project`|
+
+and clone it.
+
+**2**. In the root of the source project, build your site by:
+
+```console
+$ bash tools/build.sh -d /path/to/local/project/
 ```
+
+The generated static files will be placed in the root of `/path/to/local/project`. Commit and push the changes to the `master` branch on GitHub.
+
+**3**. Go to GitHub website and enable Pages service for the new repository.
+
+**4**. Visit at:
+
+|Site Type | Site URL |
+|:---|:---|
+|User or Organization | `https://<username>.github.io/`|
+|Project| `https://<username>.github.io/project/`|
+
+and enjoy!
+
+### Documentation
+
+For more details and the better reading experience, please check out the [tutorial in demo site](https://chirpy.cotes.info/categories/tutorial/). In the meanwhile, a copy of the tutorial is also available on the [Wiki](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
 
 ## Contributing
 
-Want to help make this theme even better? Contributions from the community are welcome!
+The old saying: "Tow heads are better than one. Five heads are better than two." So, welcome to report bugs, improve code quality or submit a new feature. For more information, see [contributing guidelines](.github/CONTRIBUTING.md).
 
-Please follow these steps:
 
-1. Fork/clone this repository.
-2. Develop (and test!) your changes.
-3. Open a pull request on GitHub. A description and/or screenshot of changes would be appreciated!
-4. I ([Ben Centra](https://github.com/bencentra)) will review and merge the pull request.
+## Credits
+
+This theme is mainly built with [Jekyll](https://jekyllrb.com/) ecosystem, [Bootstrap](https://getbootstrap.com/), [Font Awesome](https://fontawesome.com/) and some other wonderful tools(their copyright information can be found in the relevant files).
+
+:tada:Thanks to all the volunteers who contributed to this project, their github ID is on [this list](https://github.com/cotes2020/jekyll-theme-chirpy/graphs/contributors). Also, I won't forget the guys who submitted the issues(or unmerged PR), they reported bugs, shared ideas or inspired me to write more readable documentation.
+
+
+## Support
+
+If you enjoy this theme or find it helpful, please consider becoming my sponsor, I'd really appreciate it! Click the button <kbd>:heart:Sponsor</kbd> at the top of the [Home Page](https://github.com/cotes2020/jekyll-theme-chirpy) and choose a link that suits you to donate. This will encourage me and help me maintain this project.
+
 
 ## License
 
-MIT. See [LICENSE.MD](https://github.com/bencentra/centrarium/blob/master/LICENSE.md).
-
-[bencentra]: http://bencentra.com
-[bourbon]: http://bourbon.io/
-[neat]: http://neat.bourbon.io/
-[bitters]: http://bitters.bourbon.io/
-[refills]: http://refills.bourbon.io/
-[fontawesome]: http://fortawesome.github.io/Font-Awesome/
-[highlightjs]: https://highlightjs.org/
-[highlightjs_theme]: https://highlightjs.org/static/demo/
-[lightbox]: http://lokeshdhakar.com/projects/lightbox2/
-[cover]: https://www.flickr.com/photos/79666107@N00/3796678503/in/photolist-6MuYfc-61Rtft-8XzPmY-a6Cozm-54eSMs-6oMJmk-aepZQq-9YkPHp-fiAEGE-dVP4Z5-oxPyJP-atKUFJ-9YHWA5-9YF2f2-9YF2gR-9YHVGN-9YHVvs-qZYYQ6-4JqP2i-a2peGy-9YHVUm-9YHVF7-9YHVCL-9YF3NK-cYteMo-aiPmb9-69dtAi-9YF21x-4aWpmn-7SLiUL-77pqVX-8vXbYv-4HGDSH-a2h5P1-8LsZrQ-9aj1ez-auPZ7q-9YHVMd-9YF2bi-9YF23D-8LpWpn-9an6KL-9YHVZL-dqZ3Cz-2GuvnX-9YHWUo-9YHVWd-p5Roh5-i1zTbv-6sYrUT
-[disqus]: https://disqus.com/
-[ga]: http://www.google.com/analytics/
-[archives]: https://github.com/jekyll/jekyll-archives
-[sitemap]: https://github.com/jekyll/jekyll-sitemap
+This work is published under [MIT](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE) License.
