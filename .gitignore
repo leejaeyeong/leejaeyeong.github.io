@@ -1,14 +1,12 @@
-# hidden files
-.*
+.DS_Store
 
-# python compiled files
-*.pyc
-
-# jekyll debug
+# Compiled site
 _site
+.jekyll-cache/
 
-# Jeykll Gemfile.lock
-Gemfile.lock
+# Sass garbage
+.sass-cache
 
-# bundle cache
-vendor
+# Bundler
+.bundle/
+vendor/
