@@ -1,30 +1,35 @@
 # Site Settings
 baseurl: ""
-url : "https://naye0ng.github.io"
+url : "https://leejaeyeong.github.io"
 
 # Blog Settings
 theme_settings :
-  title : Grape Theme
+  title : jylee. blog
   favicon : assets/favicon.ico
 
   # Profile Settings
   profile :
     image : assets/img/smile.png
-    username : Nayeong Kim
-    description : creator of Grape-Theme! Grape-Theme is my first jekyll theme and you can customize this theme easily.
+    username : jylee.
+    description : 생각날 때 찾는 곳, <br> Where to find when I thinking
     experience :
-      - start : 2017-05-03
-        end : 2018-05-06
-        experience : company name, title
+      - start : 2019-03-01
+        end : 2020-02-29
+        experience : 멋쟁이사자처럼 7기 
+      - start : 2020-03-01
+        end : 2021-02-29
+        experience : 멋쟁이사자처럼 8기 운영진 
     skills : 
       - skill : HTML5 & CSS
+        value : 80  # Percent value
+      - skill : Python & Django 
         value : 85  # Percent value
         
   # Icons
   icons :
     email:  # Full email address, e.g. "sample@google.com"
     linkedin:  # Full URL 
-    github: naye0ng
+    github: leejaeyeong
     gitlab: 
     bitbucket: 
     google_plus:
