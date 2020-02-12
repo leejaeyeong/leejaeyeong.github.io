@@ -11,7 +11,7 @@ theme_settings :
   profile :
     image : assets/img/smile.png
     username : jylee.
-    description : 생각날 때 찾는 곳, <br> Where to find when I thinking
+    description : 생각하는 대로 살지 않으면, <br> 사는 대로 생각하게 된다.
     experience :
       - start : 2019-03-01
         end : 2020-02-29
